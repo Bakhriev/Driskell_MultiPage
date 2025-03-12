@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title></title>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./images/icons/logo.svg" />
+
+		<link
+			rel="preload"
+			href="./fonts/jost_regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+
+		<link
+			rel="preload"
+			href="./fonts/jost_medium.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+
+		<link
+			rel="preload"
+			href="./fonts/jost_bold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin />
+
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+		<div class="app">
+			@include('./html/header.html')
+			<main class="main">
+				<!--  -->
+				@include('./html/hero.html')
+				<!--  -->
+			</main>
+			@include('./html/footer.html')
+		</div>
+
+		<script type="module" src="./js/main.js"></script>
+	</body>
+</html>

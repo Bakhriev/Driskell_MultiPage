@@ -1,0 +1,33 @@
+{
+	"name": "gulp",
+	"version": "1.0.0",
+	"license": "MIT",
+	"author": "Bakhriev <legendofpain5112@gmail.com>",
+	"main": "gulpfile.js",
+	"type": "module",
+	"scripts": {
+		"dev": "gulp dev",
+		"build": "set NODE_ENV=build && gulp build",
+		"preview": "gulp preview",
+		"zip": "gulp zip"
+	},
+	"devDependencies": {
+		"browser-sync": "^3.0.3",
+		"del": "^8.0.0",
+		"gulp": "^5.0.0",
+		"gulp-autoprefixer": "^9.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-file-include": "^2.3.0",
+		"gulp-group-css-media-queries": "^1.2.2",
+		"gulp-htmlmin": "^5.0.1",
+		"gulp-if": "^3.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-sass": "^6.0.1",
+		"gulp-svg-sprite": "^2.0.3",
+		"gulp-uglify": "^3.0.2",
+		"gulp-zip": "^6.1.0",
+		"prettier": "^3.5.3",
+		"sass": "^1.85.1"
+	},
+	"dependencies": {}
+}

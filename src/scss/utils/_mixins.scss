@@ -1,0 +1,67 @@
+@mixin hover {
+	@media (any-hover: hover) and (pointer: fine) {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin center {
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+
+@mixin center-y {
+	top: 50%;
+	translate: 0 -50%;
+}
+
+@mixin text-shorten($numLines: 1) {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	@supports (-webkit-line-clamp: $numLines) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: initial;
+		display: -webkit-box;
+		-webkit-line-clamp: $numLines;
+		-webkit-box-orient: vertical;
+	}
+}
+
+@mixin btn-reset {
+	// For <a></a>
+	display: inline-block;
+	text-decoration: none;
+
+	padding: 0;
+
+	cursor: pointer;
+	user-select: none;
+
+	font: inherit;
+	color: inherit;
+
+	background-color: transparent;
+	border: none;
+}
+
+@mixin list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin input-reset {
+	width: 100%;
+	padding: 0;
+	border: none;
+	outline: none;
+	border-radius: 0;
+	background-color: transparent;
+	font: inherit;
+	color: inherit;
+}
