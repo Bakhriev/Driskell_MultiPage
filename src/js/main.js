@@ -43,4 +43,38 @@ const initCatalogMenu = triggerSelector => {
 	});
 };
 
+const initDropdownList = () => {
+	const dropdowns = document.querySelectorAll(".dropdown-list");
+
+	if (!dropdowns.length) return;
+
+	dropdowns.forEach(dropdown => {
+		const btn = dropdown.querySelector(".dropdown-list__btn");
+		const wrapper = dropdown.querySelector(".dropdown-list__wrapper");
+
+		btn.addEventListener("click", () => {
+			btn.classList.toggle("active");
+
+			if (wrapper.style.height === "") {
+				wrapper.style.height = `${wrapper.scrollHeight}px`;
+			} else {
+				wrapper.style.height = "";
+			}
+		});
+	});
+};
+
+const mobileMenu = () => {
+	const triggerBtn = document.querySelector('[data-trigger="mobile-menu"]');
+	const burger = triggerBtn.querySelector(".burger");
+	const mobileMenu = document.querySelector(".mobile-menu");
+
+	triggerBtn.addEventListener("click", () => {
+		mobileMenu.classList.toggle("active");
+		burger.classList.toggle("active");
+	});
+};
+
 initCatalogMenu("[data-trigger='catalog-menu']");
+initDropdownList();
+mobileMenu();
